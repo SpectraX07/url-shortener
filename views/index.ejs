@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome URL Shortener</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1 class="title">URL Shortener</h1>
+            <div class="input-wrapper">
+                <input type="url" id="url" placeholder="Enter your URL" />
+                <button id="generate" class="btn-generate">
+                    <span class="spinner"></span>
+                    <span class="btn-text">Shorten</span>
+                    <span class="btn-icon">✂️</span>
+                </button>
+            </div>
+            <div id="outputContainer" class="output-container">
+                <p id="output" class="output"></p>
+                <button id="copyBtn" class="btn-copy" disabled>
+                    <span class="btn-text">Copy</span>
+                    <span class="btn-icon">✓</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="background-animation"></div>
+    <div id="particles-js"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="/public/js/scripts.js"></script>
+</body>
+</html>
