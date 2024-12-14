@@ -27,7 +27,7 @@ A web-based application that allows users to shorten URLs and redirect to the or
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/url-shortener.git
+   git clone https://github.com/SpectraX07/url-shortener.git
    ```
 
 2. Navigate to the project directory:
@@ -149,7 +149,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Acknowledgments
 
 - [GSAP](https://greensock.com/gsap/) for animations.
-- [Particles.js](https://particles.js.org/) for background particle effects.
 - [MongoDB](https://www.mongodb.com/) for database integration.
 
 ---
@@ -161,5 +160,3 @@ If you have any questions or suggestions, feel free to reach out:
 - **Email**: spectraxcodes07@gmail.com
 - **GitHub**: [SpectraX07](https://github.com/SpectraX07)
 ```
-
-This includes the **Contributing** section with instructions for forking the repository, making changes, and submitting a pull request. Let me know if you need any further changes!
