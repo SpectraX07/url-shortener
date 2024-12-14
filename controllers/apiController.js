@@ -10,9 +10,10 @@ export const shortenUrl = async (req, res) => {
             url = new Url({ originalUrl });
             await url.save();
         }
-        res.json({ shortUrl: `${req.headers.host}/${url.shortUrl}` });
+        res.json({ success: true, shortUrl: `${req.headers.host}/${url.shortUrl}` });
     } catch (error) {
-        res.status(500).json({ error: 'Server error' });
+        console.error('Error processing request:', error);
+        res.status(500).json({ success: false, error: 'Server error' });
     }
 };
 
@@ -22,10 +23,11 @@ export const redirectToOriginal = async (req, res) => {
     try {
         const url = await Url.findOne({ shortUrl });
         if (url) {
-            return res.redirect(url.originalUrl);
+            return res.status(200).json({ success: true, originalUrl: url.originalUrl });
         }
-        res.status(404).send('URL not found');
+        res.status(404).json({ success: false, error: 'URL not found' });
     } catch (error) {
-        res.status(500).send('Server error');
+        console.error('Error processing request:', error);
+        res.status(500).json({ success: false, error: 'Server error' });
     }
 };
