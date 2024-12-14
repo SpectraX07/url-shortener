@@ -2,7 +2,7 @@
     --primary-color: #4C90D1; /* Soft Blue */
     --secondary-color: #45B69D; /* Muted Green */
     --tertiary-color: #FFC857; /* Warm Yellow */
-    --background-color: #F4F7FB; /* Light Background */
+    --background-color: linear-gradient(135deg, #A8D0E6, #F76C6C, #FFBC67, #A8E6CF); /* Soothing Gradient */
     --input-bg: #FFFFFF; /* Input Background */
     --card-bg: rgba(255, 255, 255, 0.9); /* Light card background */
     --text-color: #333; /* Dark text color */
@@ -17,13 +17,27 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: var(--background-color);
+    background: var(--background-color);
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s ease infinite;
     color: var(--text-color);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     overflow: hidden;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .container {
